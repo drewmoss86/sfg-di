@@ -18,9 +18,8 @@ public class SfgDiApplication {
         //Classname, but lowercase by default. Also, without casting a MyController object, bean will just return an object type
         MyController myC = (MyController) ctx.getBean("myController");
 
-        String greeting = myC.sayHello();
-
-        System.out.println(greeting);
+        System.out.println("------ Primary Bean");
+        System.out.println(myC.sayHello());
 
         System.out.println("------ Property");
 

@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller // For spring to detect this as a Spring component
+@Controller
 public class PropertyInjectedController {
 
-    @Qualifier("propertyInjectedGreetingService")
-    @Autowired // For injecting service into controller
+    @Autowired
+    @Qualifier("greetingServiceImpl")
     public GreetingService gs;
 
-    public String getGreeting(){
+    public String sayHello(){
         return gs.sayGreeting();
     }
 }

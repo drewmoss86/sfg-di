@@ -6,13 +6,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
-    private final GreetingService gs;
+    private GreetingService gs;
 
     public MyController(GreetingService gs) {
         this.gs = gs;
     }
 
-    public String sayHello(){
+    public String hello(){
+        System.out.println("Hello!!!");
         return gs.sayGreeting();
     }
 }
